@@ -1,3 +1,3 @@
 def call(){
-    'mvn deploy'
+    'mvn clean deploy'
 }
