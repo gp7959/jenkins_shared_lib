@@ -1,3 +1,3 @@
 def call(){
-    bat 'mvn deploy'
+    bat 'mvn deploy -X'
 }
