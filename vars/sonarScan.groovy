@@ -1,4 +1,6 @@
 def call(){
     bat 'java -version'
-    bat 'mvn sonar:sonar'
+    withSonarQubeEnv(credentialsId: credentialsId){
+        bat 'mvn sonar:sonar'
+    }
 }
