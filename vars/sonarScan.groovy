@@ -1,5 +1,5 @@
 def call(credentialsId){
-    withSonarQubeEnv(credentialsId: credentialsId){
-        bat "mvn sonar:sonar -Dsonar.token=$credentialsId"
+withCredentials([string(credentialsId: credentialsId, variable: 'sonarToken')]){
+        bat "mvn sonar:sonar -Dsonar.token=${sonarToken}"
     }
 }
