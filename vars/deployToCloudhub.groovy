@@ -1,3 +1,3 @@
-def call(){
-    bat 'mvn deploy -DmuleDeploy -Pcloudhub1 -DappName=${appName} -DdeployEnv=${deployEnv} -Dregion=${region} -Dworkers=${workers} -DworkerType=${workerType} -DplatformClientId=${platformClientId} -DplatformClientSecret=${platformClientSecret}'
+def call(map cloudParams){
+    bat 'mvn deploy -DmuleDeploy -Pcloudhub1 -DappName=${cloudParams.appName} -DdeployEnv=${cloudParams.deployEnv} -Dregion=${cloudParams.region} -Dworkers=${cloudParams.workers} -DworkerType=${cloudParams.workerType} -DplatformClientId=${cloudParams.platformClientId} -DplatformClientSecret=${cloudParams.platformClientSecret}'
 }
