@@ -9,5 +9,6 @@ def call(Map cloudParams){
     -DworkerType=${cloudParams.workerType} 
     -DplatformClientId=${cloudParams.platformClientId} 
     -DplatformClientSecret=${cloudParams.platformClientSecret}
+    -X
     """
 }
